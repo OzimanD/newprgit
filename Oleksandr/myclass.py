@@ -13,3 +13,4 @@ def salary_bonus(salary, years):
 
 
 print(salary_bonus(1000, 5))
+#chat molodec, chekau na vashi rishennya
