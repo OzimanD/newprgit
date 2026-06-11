@@ -18,7 +18,7 @@ def work_bonus(salary, work_experience):
         print("You dont have any bonus")
         bonus_in_percent = 0
 
-    bonus = salary * bonus_in_percent / 100
+    bonus = salary * bonus_in_percent / 100 #добавил бы скобочки (salary) * (bonus_in_percent)
     full_salary = salary + bonus
     return bonus, full_salary
 
