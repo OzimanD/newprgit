@@ -31,12 +31,6 @@
 # print("Bonus: ", salary_result[0])
 # print("Total bonus: ", salary_result[1])
 
-'''
-1 Даны два целых числа A и B (A < B). Найти все целые числа, расположенные между данными числами (включая сами эти числа), в порядке их возрастания, а также количество N этих чисел.
-2Даны два целых числа A и B (A < B). Найти все целые числа, расположенные между данными числами (не включая сами эти числа), в порядке их убывания, а также количество N этих чисел.
-3Дано вещественное число A и целое число N (> 0). Найти A в степени N:
-AN = A·A··A (числа A перемножаются N раз) .
-'''
 
 '''
 1 Даны два целых числа A и B (A < B). 
@@ -44,7 +38,17 @@ AN = A·A··A (числа A перемножаются N раз) .
 а также количество N этих чисел.
 '''
 
+def new_numbers(A, B):
+    print_number = 0
 
+    for number in range(A, B + 1):
+        print(number)
+        print_number += 1
+    return print_number
 
-# def new_numbers(A, B):
-#     for number in range(A, B + 1):
+A = int(input("Enter your first number: "))
+B = int(input("Enter your second number: "))
+
+print_number = new_numbers(A, B)
+
+print(f"Amount of numbers: {print_number}")
