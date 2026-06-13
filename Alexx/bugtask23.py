@@ -6,6 +6,7 @@ def main():
     countdown = 3.0
     while countdown >= 0.0:
         print(countdown)
+        print(countdown)
         countdown -= 0.5  # Зменшуємо крок
 
 main()
