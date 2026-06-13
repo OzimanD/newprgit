@@ -7,6 +7,6 @@
 def myfunc():
     mylist = [1, 2, 2, 3, 4, 4, 4, 5]
     mylist = set(mylist)
-    print(mylist)
+    print(mylist)# 111111111111
 
 myfunc()
