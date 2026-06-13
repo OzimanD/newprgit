@@ -18,3 +18,4 @@ whele guess != secret_number:
 
     guess = int(input("Спробуй ще раз:"))
 print("Ти вгадав!")
+#
