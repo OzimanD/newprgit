@@ -7,4 +7,5 @@ for word in words:
     else:
         word_count[word] = 1
 
+
 print(word_count)
