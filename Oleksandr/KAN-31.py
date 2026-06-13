@@ -21,3 +21,4 @@ final_price = price - discount
 
 print("Знижка:" discount)
 print("До сплати:", final_price)
+ #
