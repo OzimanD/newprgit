@@ -7,5 +7,6 @@ def shopitems():
     items = ['Олександр', 'Юлія', 'Ірина', 'Олексій']
     print('той хто вийшов з черги: ', items.pop(0))
     print('ті хто лишився в черзі: ', items)
+    print('ті хто лишився в черзі: ', items)
 
 shopitems()
