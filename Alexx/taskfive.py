@@ -10,3 +10,4 @@ def shopitems():
     print('ті хто лишився в черзі: ', items)
 
 shopitems()
+#DONE!
