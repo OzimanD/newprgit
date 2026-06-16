@@ -20,3 +20,4 @@ for item in products_list:
         a = products_list.pop(products_list.index(item))
         print("remove - ", a, "from 'products_list'")
 print(products_list)
+
