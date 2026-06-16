@@ -12,3 +12,4 @@ print("Оригінал:", original_basket) # ['молоко', 'хліб', 'ка
 print("Бэкап:", backup_basket)     # Тепер лише ['молоко', 'хліб']
 
 "Just a copy of my code, Perfect task!"
+"Besides the fact that you reassigned my task to yourself and commited your file after mine? You are not slick bro)"
