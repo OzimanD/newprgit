@@ -20,3 +20,5 @@ def pay_bonus(pay_sum,experience):
 salary = float(input("Введіть зарплату: "))
 experience = float(input("Введіть стаж: "))
 pay_bonus(salary,experience)
+
+#DONE!
