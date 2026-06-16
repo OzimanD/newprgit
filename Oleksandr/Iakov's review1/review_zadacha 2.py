@@ -12,3 +12,15 @@ for number in range(a, b + 1):
     n = n + 1
 
 print("Кількість чисел N:", n)
+
+"Завдання просте і читабельне тому 10/10, але все ж таки я покажу свій варіант"
+
+a = int(input("Введіть число A: "))
+b = int(input("Введіть число B: "))
+
+for number in range(a, b + 1):
+    print(number)
+
+n = b - a + 1
+
+print("Кількість чисел N:", n)
