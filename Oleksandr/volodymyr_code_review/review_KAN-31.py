@@ -19,7 +19,7 @@ else:
 discount = price * discount_percent / 100
 final_price = price - discount
 
-print("Знижка:" discount)
+print("Знижка:", discount)
 print("До сплати:", final_price)
  #
 
