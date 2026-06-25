@@ -29,145 +29,44 @@ class Laptop(Computer):
         self.model = model
 '''
 
-
-"""
-
-1   Поля
-Прізвище
-Амплуа
-Вік
-Кількість ігор
-Кількість голів
-Визначити найкращого форварда, і вивести відомості про футболістів, які зіграли менше 5-ти ігор.
-"""
-
-
-# class Football:
-#     def __init__(self, name, position, age, number_of_matches, number_of_goals):
-#         self.name = name
-#         self.position = position
-#         self.age = age
-#         self.number_of_matches = number_of_matches
-#         self.number_of_goals = number_of_goals
-#
-#     def __str__(self):
-#         return f"{self.name}, {self.position}, {self.age}, {self.number_of_matches}, {self.number_of_goals}"
-#
-# player_1 = Football("Player 1", position="for", age=20, number_of_matches=10, number_of_goals=8)
-# player_2 = Football("Player 2", position="for", age=22, number_of_matches=15, number_of_goals=6)
-# player_3 = Football("Player 3", position="for", age=24, number_of_matches=20, number_of_goals=25)
-#
-# football_players = [player_1, player_2, player_3]
-#
-# def best_player(football_player, position):
-#     best_forward = None
-#     max_goal = -1
-#     for player in football_player:
-#         if player.position == position and player.number_of_goals > max_goal:
-#             max_goal = player.number_of_goals
-#             best_forward = player
-#     return f"best forward is {best_forward} with {max_goal} goals"
-#
-# get_best_player = best_player(football_players, "for")
-# print(get_best_player)
-
-
-
-
-"""
-Прізвище
-Група
-Фізика
-Інформ
-Історія
-Визначити середній бал оцінок з всіх предметів, і вивести відомості про ня про студентів, 
-середній бал яких більший за 4 яких більше 4.
-------------------------------------------------------------
-"""
-
-
-#
-# class School:
-#     def __init__(self, name, group, physics, informatics, history):
-#         self.name = name
-#         self.group = group
-#         self.physics = physics
-#         self.informatics = informatics
-#         self.history = history
-#
-#     def avg_grade(self):
-#         grades = [
-#             self.physics,
-#             self.informatics,
-#             self.history,
-#         ]
-#         return sum(grades) / len(grades)
-#
-#     def __str__(self):
-#         return f"{self.group} {self.physics} {self.informatics} {self.history}"
-#
-# student_1 = School("John", 1, 5, 5, 4)
-# student_2 = School("Bob", 2, 4, 5, 4)
-# student_3 = School("Ben", 3, 2, 2, 5)
-#
-#
-# students = [student_1, student_2, student_3]
-#
-#
-# def show_students(students):
-#     for student in students:
-#         average = student.avg_grade()
-#         if average > 4:
-#             print(student.name)
-#             print(f"avg grade: {average}")
-#
-# show_students(students)
-
-
-
-"""
-3   Поля
-Продавець
-Найменування
-Кількість
-Ціна
-Дата_продажу
-Визначити кількість товарів, які продані менше року тому і вивести відомості про них.
-"""
-
 import datetime
 
-class Shop:
-    def __init__(self, seller, product_name, amount, price, date_of_sale):
-        self.seller = seller
-        self.product_name = product_name
+class Product:
+    def __init__(self, name):
+        self.name = name
+
+
+class SpecificProduct(Product):
+    def __init__(self, name, amount, price, model, date_received_at_warehouse):
+        super().__init__(name)
+
         self.amount = amount
         self.price = price
-        self.date_of_sale = date_of_sale
-
-    def young_products(self):
-        one_year = datetime.datetime.now() - self.date_of_sale
-        return one_year
-
+        self.model = model
+        self.date_received_at_warehouse = date_received_at_warehouse
 
     def __str__(self):
-        return f"{self.seller}, {self.product_name}, {self.amount}, {self.price}, {self.date_of_sale}"
+        return f"{self.name} {self.amount} {self.price} {self.model}, {self.date_received_at_warehouse}"
 
-
-first_product = Shop("Bob", "apple", 5, 100, datetime.datetime(2026, 5, 1))
-second_product = Shop("John", "banana", 10, 500, datetime.datetime(2024, 3, 22))
-third_product = Shop("Ben", "watermelon", 13, 2600, datetime.datetime(2023, 10, 17))
-
+first_product = SpecificProduct("macbook", 5, 1500, "Pro", datetime.datetime(2026, 6, 20))
+second_product = SpecificProduct("Asus", 2, 1400, "Rog", datetime.datetime(2026, 6, 4))
+third_product = SpecificProduct("Acer", 10, 1100, "Nitro", datetime.datetime(2026, 5, 29))
 
 products = [first_product, second_product, third_product]
-def product_in_this_year():
-    for product in products:
-        young = product.young_products()
-        if young < datetime.timedelta(days=365):
-            print(product.product_name)
-            print(product.amount)
-            print(product.price)
-            print(product.date_of_sale)
 
+def find_specific_product(all_products):
+    product_result = []
+    for product in all_products:
+        if product.amount > 5:
+            product_result.append(product)
 
-product_in_this_year()
+    return product_result
+
+result = find_specific_product(products)
+
+for product in result:
+    print(f"product name: {product.name}")
+    print(f" amount: {product.amount}")
+    print(f" price: {product.price}")
+    print(f" model: {product.model}")
+    print(f" date received at warehouse: {product.date_received_at_warehouse}")
