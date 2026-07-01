@@ -84,7 +84,7 @@ def analyze_hockey_players(players_list):
         print("Таких гравців немає.")
 
 
-players = []
+players = [h1, h2, h3, h4, h5]
 try:
     result = analyze_hockey_players(players)
     if result:
