@@ -19,6 +19,7 @@ class Book:
     @autor.setter
     def autor(self, autor):
         self.__autor = autor
+
     @property
     def number_of_pages(self, number_of_pages):
         return self.__number_of_pages
@@ -28,6 +29,7 @@ class Book:
             self.__number_of_pages = number_of_pages
         else:
             print("Кількість сторінок має бути більшою за 150")
+
     @property
     def circulation(self, circulation):
         return self.__circulation
@@ -37,6 +39,7 @@ class Book:
             self.__circulation = circulation
         else:
             print ("Тираж не може бути від'ємним")
+
     @property
     def year_of_publication(self, year_of_publication):
         return self.__year_of_publication
@@ -59,6 +62,7 @@ a4 = Book("Chaldini",   34, 2052)
 a5 = Book("Puaro", 39, 2056)
 
 books = [a1, a2, a3, a4, a5]
+print(books)
 
 def more_than_150_pages(books):
     count = []
