@@ -1,9 +1,6 @@
-from Methods import *
-def find_max_product(products):
-    maxProduct = products[0]
+from Objects import
+from Methods import
 
-    for product in products:
-        if product.get_quantity() > maxProduct.get_quantity():
-            maxProduct = product
-
-    print(maxProduct)
+print_product(products)
+write_file(products)
+read_file()

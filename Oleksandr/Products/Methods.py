@@ -1,5 +1,7 @@
 from Objects import *
-def __str__(self):
-    return (f"Назва: {self.__name},кількість: {self.__quantity},"
-            f"ціна: {self.__price}, рік: {self.__year},"
-            f"Виробник: {self.__manufacturer}")
+
+
+def max_product = products[0]
+for product in products:
+    if product.get_quantity() > max_product.get_quantity():
+        max_product = product
