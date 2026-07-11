@@ -1,5 +1,5 @@
-from Objects import
-from Methods import
+from Objects import *
+from Methods import *
 
 print_product(products)
 write_file(products)
